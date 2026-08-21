@@ -3,6 +3,12 @@ return {
     opts = {
         inlay_hints = { enabled = true },
         servers = {
+            typos_lsp = {
+                filetypes = { "go", "python", "typescript", "javascript", "rust", "markdown" },
+                init_options = {
+                    diagnosticSeverity = "Warning",
+                },
+            },
             graphql = {
                 filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
             },
