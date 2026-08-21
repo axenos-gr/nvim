@@ -50,3 +50,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
     end,
 })
+
+vim.g.inlay_hints_enabled = true

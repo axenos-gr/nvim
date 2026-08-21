@@ -1,6 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     opts = {
+        inlay_hints = { enabled = true },
         servers = {
             graphql = {
                 filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
@@ -36,6 +37,21 @@ return {
                     "typescriptreact",
                     "svelte",
                     "vue",
+                },
+            },
+            gopls = {
+                settings = {
+                    gopls = {
+                        hints = {
+                            assignVariableTypes = true,
+                            parameterNames = true,
+                            compositeLiteralFields = true,
+                            compositeLiteralTypes = true,
+                            constantValues = true,
+                            functionTypeParameters = true,
+                            rangeVariableTypes = true,
+                        },
+                    },
                 },
             },
         },

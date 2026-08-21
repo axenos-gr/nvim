@@ -43,6 +43,17 @@ return {
                     program = "${file}",
                     console = "integratedTerminal",
                 },
+                {
+                    type = "python",
+                    request = "launch",
+                    name = "file with argument",
+                    program = "${file}",
+                    console = "integratedTerminal",
+                    args = function()
+                        local args_string = vim.fn.input("Arguments: ")
+                        return vim.split(args_string, " ", { trimempty = true })
+                    end,
+                },
             }
 
             dap.adapters.codelldb = {
