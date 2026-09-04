@@ -1,6 +1,6 @@
 return {
     {
-        "codegik/claude-chat.nvim",
+        "axenos-gr/claude-chat.nvim",
         cmd = { "ClaudeChat", "ClaudeChatReset", "ClaudeChatFile", "ClaudeChatContinue", "ClaudeChatSessions" },
         keys = {
             { "<leader>ai", "<cmd>ClaudeChat<cr>", desc = "Claude Chat: toggle sidebar" },
